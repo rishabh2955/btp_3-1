@@ -27,3 +27,26 @@ nav
 {
     padding : 6em 0 ;
 }
+
+.box
+{
+  width:24px;
+  height:24px;
+  border-radius: 2px;
+  content:" ";
+}
+
+.box #red
+{
+  background-color: #f50606;
+}
+
+.box #yellow
+{
+  background-color: #ffc000;
+}
+
+.box #green
+{
+  background-color: #50a211;
+}
