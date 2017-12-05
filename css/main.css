@@ -36,17 +36,17 @@ nav
   content:" ";
 }
 
-.box #red
+#red
 {
   background-color: #f50606;
 }
 
-.box #yellow
+#yellow
 {
   background-color: #ffc000;
 }
 
-.box #green
+#green
 {
   background-color: #50a211;
 }
