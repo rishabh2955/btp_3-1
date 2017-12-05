@@ -52,6 +52,47 @@
         </div>
       </div>
   </div>
+  <div class="Map-wrapper">
+  <div class="row container">
+      <div class="col s12 center" id="Map_header">
+        <span><h3>Polution Map</h3></span>
+        <p>
+          A polution map for the city of Jaipur.<br /> was taken with help of VOC sensors. <br />
+        </p>
+      </div>
+      <div class="col s4 center">
+          <div class="center position">
+          <div class="box" id="green">
+          </div>
+          <div class="value">
+            <span> < 500 ppm</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s4 center">
+        <div class="center position">
+          <div class="box" id="yellow">
+          </div>
+          <div class="value">
+            <span> < 1000 ppm</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s4 center">
+          <div class="center position">
+            <div class="box" id="red">
+            </div>
+            <div class="value">
+              <span> > 1000 ppm</span>
+            </div>
+          </div>
+      </div>
+  </div>
+  <div class="row container" style="height:600px; width:100%">
+        <div id="map"></div>
+  </div>
+</div>
+
   <div class="container">
     <div class="team-wrapper">
       <div class="row center">
@@ -111,94 +152,20 @@
     <div class="team-wrapper">
       <div class="row center">
           <span><h3>Mentors</h3></span>
-      </div>
-      <div class="row">
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images">
-                <span class="card-title">Card Title</span>
-              </div>
-              <div class="card-content center">
-                <span><b>Rishabh Kapoor</b></span><br />
-                <span>UI/UX designer</span>
-              </div>
+          <div class="card col s4 push-s4">
+            <div class="card-image">
+              <img src="images">
             </div>
-          </div>
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images">
-                <span class="card-title">Card Title</span>
-              </div>
-              <div class="card-content center">
-                <span><b>Rohan Bhatti</b></span><br />
-                <span>UI/UX designer</span>
-              </div>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images">
-                <span class="card-title">Card Title</span>
-              </div>
-              <div class="card-content center">
-                <span><b>Priyanshi johry</b></span><br />
-                <span>UI/UX designer</span>
-              </div>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images">
-                <span class="card-title">Card Title</span>
-              </div>
-              <div class="card-content center">
-                <span><b>Nitesh Malethia</b></span><br />
-                <span>UI/UX designer</span>
-              </div>
+            <div class="card-content center">
+              <span><b>Dr. Kumar padhmanab</b></span><br />
+              <span>Designation</span>
             </div>
           </div>
       </div>
     </div>
-  </div>
-  <div class="row container">
-    <div class="col s12 center">
-      <span><h3>Polution Map</h3></span>
-      <p>
-        A polution map for the city of Jaipur.<br /> was taken with help of VOC sensors. <br />
-      </p>
-    </div>
-  </div>
-  <div class="row center  blue-grey lighten-5 container">
-      <div class="col s4 center">
-          <div class="center">
-          <div class="box" id="green">
-          </div>
-          <span> < 500 ppm</span></div>
-      </div>
-      <div class="col s4 center">
-        <div class="center">
-          <div class="box" id="yellow">
-          </div>
-          <span> < 1000 ppm</span>
-        </div>
-      </div>
-      <div class="col s4 center">
-          <div class="center">
-            <div class="box" id="red">
-            </div>
-            <span> > 1000 ppm</span>
-          </div>
-      </div>
-  </div>
-  <div class="row container" style="height:600px; width:100%">
-        <div id="map"></div>
   </div>
 
-    <script>
+<script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {

@@ -50,3 +50,19 @@ nav
 {
   background-color: #50a211;
 }
+
+.position
+{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+  border: 1px solid #4e4e4e;
+  padding:0.5em;
+}
+
+#Map_header
+{
+    margin-bottom: 1em;
+}
+
+s
