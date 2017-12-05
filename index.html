@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Markers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+      }
+    </style>
+  </head>
+  <body>
+  <div class="navbar-fixed">
+    <nav class="white">
+       <div class="nav-wrapper">
+         <a href="btp_v4.html" class="brand-logo grey-text text-darken-4 "><img src="assets/lnmiit_logo.png" style="width:20%;height:auto;" /></a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <li><a href="#" class=" grey-text text-darken-4">About</a></li>
+           <li><a href="#" class=" grey-text text-darken-4">Team</a></li>
+           <li><a href="#" class=" grey-text text-darken-4">Mentors</a></li>
+           <li><a href="#" class=" grey-text text-darken-4">Map</a></li>
+         </ul>
+       </div>
+    </nav>
+  </div>
+
+  <div class="row blue-grey lighten-4" id="about" >
+    <div class="row container">
+        <div class="col s12 left" id="content">
+            <p>
+              The website showcases the map of jaipur marked for its <br />
+              varrying levels of polution from place to place.
+            </p>
+            <p>
+              The data used to mark the levels of polution in different <br />
+              areas was collected using VOC sensors, which obtain the <br>
+              levels of different volatile organic compounds present in <br />
+              the atmosphere at any given point and time.
+            </p>
+        </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="team-wrapper">
+      <div class="row center">
+          <span><h3>Our Team</h3></span>
+      </div>
+      <div class="row">
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Rishabh Kapoor</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Rohan Bhatti</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Priyanshi johry</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Nitesh Malethia</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="team-wrapper">
+      <div class="row center">
+          <span><h3>Mentors</h3></span>
+      </div>
+      <div class="row">
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Rishabh Kapoor</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Rohan Bhatti</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Priyanshi johry</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content center">
+                <span><b>Nitesh Malethia</b></span><br />
+                <span>UI/UX designer</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row container">
+    <div class="col s12 center">
+      <span><h3>Polution Map</h3></span>
+      <p>
+        A polution map for the city of Jaipur.<br /> was taken with help of VOC sensors. <br />
+      </p>
+    </div>
+  </div>
+  <div class="row center  blue-grey lighten-5 container">
+      <div class="col s4 center">
+          <div class="box" id="green">
+          </div>
+          <span> < 500 ppm</span>
+      </div>
+      <div class="col s4 center">
+          <div class="box" id="yellow">
+          </div>
+          <span> < 1000 ppm</span>
+      </div>
+      <div class="col s4 center">
+          <div class="box" id="red">
+          </div>
+          <span> > 1000 ppm</span>
+      </div>
+  </div>
+  <div class="row container" style="height:600px; width:100%">
+        <div id="map"></div>
+  </div>
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: new google.maps.LatLng(26.9124, 75.7873),
+          mapTypeId: 'roadmap'
+        });
+
+        var iconBase = './assets/';
+        var icons = {
+          green: {
+            icon: iconBase + 'good.png'
+          },
+          yellow: {
+            icon: iconBase + 'bad.png'
+          },
+          red: {
+            icon: iconBase + 'worst.png'
+          }
+        };
+
+        var features = [
+          {
+            position: new google.maps.LatLng(26.969889, 75.77470),
+            type: 'yellow',
+             VOC: '871'
+          }, {
+            position: new google.maps.LatLng(26.970412, 75.772653),
+            type: 'red',
+             VOC: '1338'
+          }, {
+            position: new google.maps.LatLng(26.966720, 75.772241),
+            type: 'red',
+             VOC: '1442'
+          }, {
+            position: new google.maps.LatLng(26.951415,75.771438),
+            type: 'yellow',
+             VOC: '794'
+          }, {
+            position: new google.maps.LatLng(26.940218, 75.774234),
+            type: 'green',
+             VOC: '691'
+          }, {
+            position: new google.maps.LatLng(26.939937, 75.777409),
+            type: 'red',
+             VOC: '3227'
+          }, {
+            position: new google.maps.LatLng(26.939420,75.786154),
+            type: 'red',
+             VOC: '2063'
+          }, {
+            position: new google.maps.LatLng(26.932747,75.785001),
+            type: 'red',
+             VOC: '2291'
+          }, {
+            position: new google.maps.LatLng(26.926646,75.793387),
+            type: 'red',
+             VOC: '4203'
+          }, {
+            position: new google.maps.LatLng(26.921061, 75.794066),
+            type: 'red',
+             VOC: '2053'
+          }, {
+            position: new google.maps.LatLng(26.917752,75.801364),
+            type: 'red',
+             VOC: '1871'
+          }, {
+            position: new google.maps.LatLng(26.912069, 75.796992),
+            type: 'red',
+             VOC: '1991'
+          }, {
+            position: new google.maps.LatLng(26.90881, 75.794759),
+            type: 'red',
+             VOC: '1192'
+          }, {
+            position: new google.maps.LatLng(26.906216, 75.796967),
+            type: 'red',
+             VOC: '1097'
+          }, {
+            position: new google.maps.LatLng(26.906671, 75.801075),
+            type: 'red',
+             VOC: '1480'
+          }, {
+            position: new google.maps.LatLng(26.910497, 75.798318),
+            type: 'red',
+             VOC: '1693'
+          }, {
+            position: new google.maps.LatLng(26.911346, 75.796368 ),
+            type: 'red',
+             VOC: '1834'
+          }, {
+            position: new google.maps.LatLng(26.914374, 75.793781),
+            type: 'red',
+             VOC: '1082'
+          }, {
+            position: new google.maps.LatLng(26.898820, 75.758488),
+            type: 'red',
+             VOC: '1159'
+          }, {
+            position: new google.maps.LatLng(26.89941, 75.767947),
+            type: 'red',
+             VOC: '1287'
+          }, {
+            position: new google.maps.LatLng(26.915234, 75.753031),
+            type: 'yellow',
+             VOC: '736'
+          }, {
+            position: new google.maps.LatLng(26.912048, 75.743690),
+            type: 'red',
+             VOC: '4269'
+          }, {
+            position: new google.maps.LatLng(26.922652, 75.735056),
+            type: 'green',
+             VOC: '677'
+          }, {
+            position: new google.maps.LatLng(26.937287, 75.736884),
+            type: 'red',
+             VOC: '1497'
+          },
+          //start of second data set
+          {
+            position: new google.maps.LatLng(26.969725, 75.774006),
+            type: 'green',
+            VOC: '531'
+          }, {
+            position: new google.maps.LatLng(26.959469, 75.787252),
+            type: 'yellow',
+            VOC: '964'
+          }, {
+            position: new google.maps.LatLng(26.945410, 75.798217),
+            type: 'red',
+            VOC: '1630'
+          }, {
+            position: new google.maps.LatLng(26.940800,75.798507),
+            type: 'red',
+            VOC: '1460'
+          }, {
+            position: new google.maps.LatLng(26.932976, 75.797412),
+            type: 'red',
+            VOC: '1305'
+          }, {
+             position: new google.maps.LatLng(26.926969, 75.808463),
+             type: 'yellow',
+             VOC: '838'
+          }, {
+              position: new google.maps.LatLng(26.924933,75.818414),
+              type: 'red',
+              VOC: '7877'
+          }, {
+              position: new google.maps.LatLng(26.923307,75.827063),
+              type: 'red',
+              VOC: '4008'
+          }, {
+              position: new google.maps.LatLng(26.913532,75.832626),
+              type: 'red',
+              VOC: '2831'
+          }, {
+              position: new google.maps.LatLng(26.915500, 75.816971),
+              type: 'red',
+              VOC: '1307'
+          }, {
+              position: new google.maps.LatLng(26.908765,75.815479),
+              type: 'yellow',
+              VOC: '1024'
+          }, {
+              position: new google.maps.LatLng(26.906160, 75.818247),
+              type: 'red',
+              VOC: '1198'
+          }, {
+              position: new google.maps.LatLng(26.899014, 75.816423),
+              type: 'red',
+              VOC: '1326'
+          }, {
+              position: new google.maps.LatLng(26.892881, 75.814700),
+              type: 'red',
+              VOC: '1853'
+          }, {
+              position: new google.maps.LatLng(26.879903, 75.811338),
+              type: 'red',
+              VOC: '3968'
+          }, {
+              position: new google.maps.LatLng(26.868296, 75.808489),
+              type: 'green',
+              VOC: '540'
+          }, {
+              position: new google.maps.LatLng(26.865309, 75.807663 ),
+              type: 'red',
+              VOC: '2033'
+          }, {
+              position: new google.maps.LatLng(26.855461, 75.805432),
+              type: 'yellow',
+              VOC: '886'
+          }, {
+              position: new google.maps.LatLng(26.829872, 75.805271),
+              type: 'yellow',
+              VOC: '1216'
+          }, {
+              position: new google.maps.LatLng(26.852570, 75.794413),
+              type: 'yellow',
+              VOC: '1049'
+          }, {
+              position: new google.maps.LatLng(26.862563, 75.795283),
+              type: 'red',
+              VOC: '1339'
+          }, {
+              position: new google.maps.LatLng(26.873598, 75.776464),
+              type: 'red',
+              VOC: '1782'
+          }, {
+              position: new google.maps.LatLng(26.854884, 75.773313),
+              type: 'green',
+              VOC: '450'
+          }, {
+              position: new google.maps.LatLng(26.866577, 75.770941),
+              type: 'green',
+              VOC: '506'
+            }, {
+              position: new google.maps.LatLng(26.869732, 75.760926),
+              type: 'green',
+              VOC: '656'
+          }, {
+              position: new google.maps.LatLng(26.864267, 75.796154),
+              type: 'yellow',
+              VOC: '749'
+          }, {
+              position: new google.maps.LatLng(26.879614, 75.798993),
+              type: 'red',
+              VOC: '3410'
+          }, {
+              position: new google.maps.LatLng(26.888227, 75.794978),
+              type: 'red',
+              VOC: '1434'
+          }, {
+              position: new google.maps.LatLng(26.902145, 75.793062),
+              type: 'yellow',
+              VOC: '781'
+          }, {
+              position: new google.maps.LatLng(26.895250, 75.808823),
+              type: 'yellow',
+              VOC: '941'
+          }, {
+              position: new google.maps.LatLng(26.896859, 75.810817),
+              type: 'yellow',
+              VOC: '731'
+          }, {
+              position: new google.maps.LatLng(26.894783, 75.816555),
+              type: 'green',
+              VOC: '688'
+          }, {
+              position: new google.maps.LatLng(26.896304, 75.828662),
+              type: 'yellow',
+              VOC: '843'
+          }, {
+              position: new google.maps.LatLng(26.903191, 75.837341),
+              type: 'green',
+              VOC: '1340'
+              }
+        ];
+
+        // Create markers.
+        features.forEach(function(feature) {
+          var voc = feature.VOC;
+          var type = feature.type;
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            title:feature.VOC,
+            map: map
+          });
+          var content = '<div class="row">'+
+                          '<div class="col s12">'+
+                            '<div class="white">'+
+                              '<div class="grey-text text-darken-4">'+
+                               '<span class="card-title">Location</span><br/>'+
+                               '<span>VOC reading :'+ voc +' </span><br>'+
+                               '<span>Date :' + type + '</span><br>'+
+                              '</div>'+
+                            '</div>'+
+                          '</div>'+
+                          '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+            maxWidth: 500
+          });
+
+          google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+            return function() {
+              infowindow.setContent(content);
+              infowindow.open(map,marker);
+            };
+          })(marker,content,infowindow));
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwB_37Z-HP8cY6zJ9WY1DoqcuKNmRntlc&callback=initMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>
